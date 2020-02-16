@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/homework.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/homework.js"></script>
+    <title>作业提交系统-前台</title>
+</head>
+<body>
+    <div class="page">
+        <div class="head">
+            <i class="icon ion-clipboard"></i>
+            <span>作业提交系统</span>  
+        </div>
+        <div class="content">
+            <div class="preInfo">
+                该系统使用的注意事项：</br>
+                <i class="icon ion-alert-circled"></i> 学生使用时请点击学生提交</br>
+                <i class="icon ion-alert-circled"></i> 管理员使用时请点击老师登录</br>
+                <i class="icon ion-alert-circled"></i> 若管理员忘记账号密码请与内部人员联系</br>
+                <i class="icon ion-alert-circled"></i> 详情请咨询：QQ：850839565 联系电话：13616071299</br>
+            </div>
+            <div class="khInfo disappear"></div>
+            <input type="button" value="学生提交">
+            <input type="button" value="老师登录">
+        </div>
+
+        <div class="foot">
+            <form id="fr">
+                <div class="footStudent">
+                    <div class="stuID">
+                        <span class="star">*</span>
+                        <span>学号：</span>
+                        <input type="text" name="sId">
+                    </div>
+                    <div class="stuCheckCode">
+                        <span class="star">*</span>
+                        <span>考核码：</span>
+                        <input type="text" name="checkCode">
+                    </div>
+                    <div class="stuName">
+                        <span class="star">*</span>
+                        <span>姓名：</span>
+                        <input type="text" name="sname">
+                    </div>
+                    <div class="showFile">
+                        <ul id="fileList"></ul>
+                    </div>
+                    <div class="postContainer" title="点击上传文件，或拖动文件到此处">
+                        <div>
+                            <i class="icon ion-android-share">
+                            </i>拖拽文件上传</br>(或点击)
+                        </div>
+                        <input id="upFile" type="file" name="fileName" multiple="multiple">
+                    </div>
+                    <input type="button" value="提交">&nbsp;&nbsp;&nbsp;
+                    <span class="errorStyle disappear">
+                        <i class="icon ion-alert-circled"></i>
+                        请检查学号、姓名、考核码、文件是否填入
+                    </span>
+                </div>
+            </form>
+            <form action="" method="GET">
+                <div class="footTeacher disappear">
+                    <span class="errorStyle disappear">
+                        <i class="icon ion-alert-circled"></i>
+                        账号或密码错误
+                    </span>
+                    <span class="errorStyle disappear">
+                        <i class="icon ion-alert-circled"></i>
+                        账号或密码不能为空
+                    </span>
+                    <div class="techAccount">
+                        <i class="icon ion-person"></i>
+                        <span>账号:</span>
+                        <input type="text" name="adname" placeholder="请输入账号">
+                        <i class="hide icon ion-eye-disabled"></i>
+                    </div>
+                    <div class="techPassword">
+                        <i class="icon ion-locked"></i>
+                        <span>密码:</span>
+                        <input type="password" name="adid" placeholder="请输入密码">
+                        <span id="eye">
+                            <i class="icon ion-eye-disabled"></i>
+                            <i class="icon ion-eye disappear"></i> 
+                        </span>      
+                    </div>
+                    <div id="remember">
+                        <input style="cursor: pointer;" id="rememberPw" type="checkbox">
+                        <label style="cursor: pointer;" for="rememberPw">记住密码</label>&nbsp;&nbsp;
+                        <a href="mailto:954876644@qq.com">忘记密码？</a>
+                    </div>
+                    <input type="button" value="登录">
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

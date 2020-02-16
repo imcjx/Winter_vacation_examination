@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Backstage.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/Backstage.js"></script>
+    <title>作业提交系统-后台</title>
+</head>
+<body>
+    <div class="page">
+        <div class="head">
+            <h1>
+                <span>作业提交系统-后台</span>
+                <i class="icon ion-android-options"></i>
+                <span class="nav disappear">
+                    <span>考核发布</span>
+                    <span>考核列表</span>
+                </span>
+            </h1>
+            <h3>欢迎您，UID221801113</h3>
+        </div>
+        
+        <div class="cttBackground">
+            <div class="checkListContent">
+                <div class="cttHead">
+                    <div style="display: inline-block;">
+                        <i class="icon ion-ios-shuffle-strong"></i>
+                        <span>考核列表</span>  
+                    </div>
+                    <span style="display: inline-block; margin-left: 8px;">
+                        <i title="删除选中" class="icon ion-android-delete"></i>
+                    </span>
+                    <div></div>
+                </div>
+                <div class="checkList">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>考核码</th>
+                                <th>考核题目</th>
+                                <th>考核概述</th>
+                                <th>考核状态</th>
+                                <th>截止日期</th>
+                                <th>工具栏</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>01</td>
+                                <td>第一次考核</td>
+                                <td>上传HTML页面</td>
+                                <td class="khStatus">
+                                    <span class="notFinishStatus">未结束</span>
+                                    <span class="khOver">点击结束</span>
+                                </td>
+                                <td>张三</td>
+                                <td class="khTool">
+                                    <span><i title="详情" class="icon ion-ios-search-strong"></i></span>
+                                    <span><i title="删除" class="icon ion-ios-close-outline"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>02</td>
+                                <td>第一次考核</td>
+                                <td>上传HTML页面</td>
+                                <td>
+                                    <span class="finishStatus">已结束</span>
+                                    <span class="khOver">点击结束</span>
+                                </td>
+                                <td>张三</td>
+                                <td class="khTool">
+                                    <span><i title="详情" class="icon ion-ios-search-strong"></i></span>
+                                    <span><i title="删除" class="icon ion-ios-close-outline"></i></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>03</td>
+                                <td>第一次考核</td>
+                                <td>上传HTML页面</td>
+                                <td>
+                                    <span class="finishStatus">已结束</span>
+                                    <span class="khOver">点击结束</span>
+                                </td>
+                                <td>张三</td>
+                                <td class="khTool">
+                                    <span><i title="详情" class="icon ion-ios-search-strong"></i></span>
+                                    <span><i title="删除" class="icon ion-ios-close-outline"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="khPageNumContainer">
+                        <div class="khPageNum">
+                            <a class="curPage" href="javascript:;">1</a>
+                            <a href="javascript:;">2</a>
+                            <a href="javascript:;">3</a>
+                            <a href="javascript:;">4</a>
+                            <a href="javascript:;">5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkPublishContent disappear">
+                <div class="cttHead">
+                    <div>
+                        <i class="icon ion-ios-shuffle-strong"></i>
+                        <span>考核发布</span>  
+                    </div>
+                    <div></div>
+                </div>
+                <div class="checkPublish">
+                    <form action="">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label for="khID">考核码：</label></td>
+                                    <td><input type="text" id="khID" placeholder="请设置考核码"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="khTitle">考核题目：</label></td>
+                                    <td><input type="text" id="khTitle" placeholder="请设置考核题目"></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top"><label for="khDetail">考核内容：</label></td>
+                                    <td><textarea style="resize: none" id="khDetail" cols="10" rows="10" placeholder="请设置考核内容"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="khDeadline">时限：</label></td>
+                                    <td><input type="text" id="khDeadline" placeholder="请设置考核时限，如：14，即考核持续2周"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="errorTips disappear">请将考核信息填写完整!!</div>
+                        <div class="errorTips disappear">考核时限应为正整数!!</div>
+                        <div><input type="button" value="发布"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="checkDetailContent disappear">
+                <div class="cttHead">
+                    <div style="display: inline-block;">
+                        <i class="icon ion-ios-shuffle-strong"></i>
+                        <span>考核详情</span> 
+                        <div style="display: inline-block; margin-left: 8px;">
+                            <!-- <i class="icon ion-ios-keypad iNav"></i> -->
+                            <span class="smallNav">
+                                <span>考核内容</span>
+                                <span>提交列表</span> 
+                            </span>
+                            <i title="编辑" style="margin: 0 10px;" class="icon ion-android-create iModify"></i>
+                            <i title="批量下载" style="margin: 0 10px;" class="icon ion-android-arrow-down iDownload"></i>
+                            <i title="批量删除" style="margin: 0 10px;" class="icon ion-android-delete iDelete"></i>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="checkDetail">
+                    <div class="detailPageOne">
+                        <table>
+                            <tbody>
+                                <tr class="dOne">
+                                    <td><span style="color: rgb(255,255,255); background-color: rgb(53,152,220); padding: 3px 8px; border-radius: 10px;">考核题目</span></td>
+                                    <td><span>第一次考核作业-C语言</span></td>    
+                                </tr>
+                                <tr class="dTwo">
+                                    <td style="height: 220px;"><span style="color: rgb(255,255,255); background-color: rgb(231,79,91); padding: 3px 8px; border-radius: 10px;">考核内容</span></td>
+                                    <td><span>具体的考核内容</span></td>
+                                </tr>
+                                <tr class="dThree">
+                                    <td><span style="color: rgb(255,255,255); background-color: rgb(141,68,175); padding: 3px 8px; border-radius: 10px;">时限</span></td>
+                                    <td><span>14</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div><input id="modifyBtn" type="button" value="提交"></div>
+                    </div>
+                    <div class="detailPageTwo disappear">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>作业ID</th>
+                                    <th>学号</th>
+                                    <th>姓名</th>
+                                    <th>提交时间</th>
+                                    <th>审核状态</th>
+                                    <th>工具栏</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>123456</td>
+                                    <td>221801113</td>
+                                    <td>蔡家鑫</td>
+                                    <td>2020/02/11/20:46:42</td>
+                                    <td><span class="auditing">审核中</span></td>
+                                    <td class="hwTool">
+                                        <i title="下载" class="icon ion-android-download"></i>
+                                        <i title="已通过" class="icon ion-android-happy"></i>
+                                        <i title="未通过" class="icon ion-android-sad"></i>
+                                        <i title="审核中" class="icon ion-android-radio-button-on"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>123457</td>
+                                    <td>221801112</td>
+                                    <td>曹鑫</td>
+                                    <td>2020/02/11/20:46:42</td>
+                                    <td><span class="pass">已通过</span></td>
+                                    <td class="hwTool">
+                                        <i title="下载" class="icon ion-android-download"></i>
+                                        <i title="已通过" class="icon ion-android-happy"></i>
+                                        <i title="未通过" class="icon ion-android-sad"></i>
+                                        <i title="审核中" class="icon ion-android-radio-button-on"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>123458</td>
+                                    <td>221801128</td>
+                                    <td>陈毅力</td>
+                                    <td>2020/02/11/20:46:42</td>
+                                    <td><span class="notPass">未通过</span></td>
+                                    <td class="hwTool">
+                                        <i title="下载" class="icon ion-android-download"></i>
+                                        <i title="已通过" class="icon ion-android-happy"></i>
+                                        <i title="未通过" class="icon ion-android-sad"></i>
+                                        <i title="审核中" class="icon ion-android-radio-button-on"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="hwPageNumContainer">
+                            <div class="hwPageNum">
+                                <a class="curPage" href="javascript:;">1</a>
+                                <a href="javascript:;">2</a>
+                                <a href="javascript:;">3</a>
+                                <a href="javascript:;">4</a>
+                                <a href="javascript:;">5</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
